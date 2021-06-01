@@ -2,9 +2,7 @@ from django.shortcuts import render
 from mainapp.models import Product
 
 
-def index(request, pk=None):
-    if pk:
-        print(f'PK -- {pk}')
+def index(request):
 
     title = 'geekshop'
     products = Product.objects.all()[:4]
