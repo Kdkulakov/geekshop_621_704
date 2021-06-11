@@ -32,7 +32,6 @@ def products(request, pk=None):
     if request.user.is_authenticated:
         basket = Basket.objects.filter(user=request.user)
 
-
     if pk is not None:
         if pk == 0:
             products = Product.objects.all().order_by('price')
